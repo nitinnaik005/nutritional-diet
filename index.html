@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पोषण आणि आहार प्रकल्प</title>
+    <style>
+        :root {
+            --primary-blue: #2087d6;
+            --accent-green: #1e8449;
+            --light-bg: #fdfefe;
+            --white: #ffffff;
+            --text-color: #2c3e50;
+            
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        
+        nav {
+            background-color: var(--primary-blue);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li { margin: 5px 15px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+
+        
+        .page {
+            display: none;
+            max-width: 900px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .active-page { display: block; }
+
+        .front-page-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            height: 300px;
+        }
+
+        .front-page-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .unit-highlight {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            display: inline-block;
+            width: 90%;
+            text-align: center;
+        }
+
+        
+        h1, h2 { color: var(--primary-blue); text-align: center; }
+        .hero-img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .item-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .item-card { background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 5px solid var(--accent-green); }
+
+       
+        .index-table { width: 100%; border-collapse: collapse; margin-top: 20px;}
+        .index-table th, .index-table td { border: 1px solid #ccc; padding: 12px; text-align: left; }
+        .index-table th { background-color: #eee; }
+
+        footer { background-color: var(--primary-blue); color: white; text-align: center; padding: 20px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#" onclick="showPage('front')">होम  पेज</a></li>
+        <li><a href="#" onclick="showPage('index')">अनुक्रमणिका</a></li>
+        <li><a href="#" onclick="showPage('home')">प्रस्तावना</a></li>
+        <li><a href="#" onclick="showPage('carbs')">कर्बोदके</a></li>
+        <li><a href="#" onclick="showPage('proteins')">प्रथिने</a></li>
+        <li><a href="#" onclick="showPage('fats')">स्निग्ध पदार्थ</a></li>
+        <li><a href="#" onclick="showPage('vitamins')">जीवनसत्त्वे</a></li>
+        <li><a href="#" onclick="showPage('questions')">स्वाध्याय</a></li>
+    </ul>
+</nav>
+
+<div id="front" class="page active-page">
+    <header><h1>प्रकल्प अहवाल</h1></header>
+    <table class="front-page-table">
+        <tr>
+            <td><strong>Student Name:</strong></td>
+            <td>Sweety Rajendra Jadhav</td>
+        </tr>
+        <tr>
+            <td><strong>Subject:</strong></td>
+            <td>Science</td>
+        </tr>
+        <tr>
+            <td><strong>Standard:</strong></td>
+            <td>Sixth</td>
+        </tr>
+        <tr>
+            <td><strong>घटक (Unit):</strong></td>
+            <td><div class="unit-highlight">पोषण आणि आहार</div></td>
+        </tr>
+        <tr>
+            <td><strong>Teacher Educator:</strong></td>
+            <td>Prof. Shaikh Z. A.</td>
+        </tr>
+    </table>
+    <div style="text-align: center; margin-top: 50px;">
+        <img src="https://www.metropolisindia.com/upgrade/blog/upload/24/07/Balanced_Diet_Basics1721048115.webp" alt="hero-img" alt="Healthy Plate" style="border-radius: 5%; width: 300px;">
+    </div>
+</div>
+
+<div id="index" class="page">
+    <header><h1>अनुक्रमणिका (Index)</h1></header>
+    <table class="index-table">
+        <tr><th>अ.क्र.</th><th>विषय / घटक</th><th>पान क्र.</th></tr>
+        <tr><td>१</td><td>प्रस्तावना - पोषण आणि आहार</td><td>१</td></tr>
+        <tr><td>२</td><td>ऊर्जादायी पोषकतत्वे: कर्बोदके</td><td>२</td></tr>
+        <tr><td>३</td><td>शरीर बांधणीसाठी: प्रथिने</td><td>३</td></tr>
+        <tr><td>४</td><td>शक्तीवर्धक: स्निग्ध पदार्थ</td><td>४</td></tr>
+        <tr><td>५</td><td>जीवनसत्त्वे आणि खनिजे</td><td>५</td></tr>
+        <tr><td>६</td><td>स्वाध्याय आणि प्रश्नसंच</td><td>६</td></tr>
+    </table> <br><br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfuCpZwcjLAjj2HCPEsLXR6Q36HvHudldO0g&s" alt="" style="width: 100% auto; align-items: center; margin-left: 250px; border-radius: 10px;">
+</div>
+
+<div id="home" class="page">
+    <h2>पोषण आणि आहार: प्रस्तावना</h2>
+    <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800" class="hero-img">
+  
+    <p style="size: 20PX; "><b>सजीवांनी अन्न व पाणी घेऊन त्यांचा शरीराच्या वाढीसाठी आणि इतर कामांसाठी वापर करणे या प्रक्रियेला 'पोषण' म्हणतात. योग्य पोषणामुळे शरीराला ऊर्जा मिळते आणि रोगांपासून संरक्षण होते.</b></p>
+    <P style="color: #0b1014;">सजीव अन्न व पाणी घेऊन त्यांचा विविध कामांसाठी उपयोग करतात. <BR></BR> • ऊर्जा मिळवणे शरीराची वाढ होणे <BR></BR> • शरीराच्या दैनंदिन क्रिया पार पाडणे. <BR></BR>  • आजारांचा प्रतिकार करणे.</P>
+</div>
+
+<div id="carbs" class="page">
+    <h2>कर्बोदके (Carbohydrates)</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMAOvgGlo-hCIbPHp1CEqMZugXjKu1YQuGgQ&s" alt="" style="margin-left: 320px; border-radius: 10px;">
+
+    <p><b>आपल्या शरीराची मुख्य गरज ऊर्जेची असते. ही ऊर्जा आपल्याला प्रामुख्याने कर्बोदकांपासून मिळते.</b></p>
+    <div class="item-grid">
+        <div class="item-card"><h3>भात व गहू</h3><p>हे ऊर्जेचे मुख्य स्रोत आहेत.</p></div>
+        <div class="item-card"><h3>बटाटे</h3><p>यात पिष्टमय पदार्थ भरपूर असतात.</p></div>
+        <div class="item-card"><h3>गूळ व साखर</h3><p>तातडीची ऊर्जा मिळवण्यासाठी उपयुक्त.</p></div>
+    </div>
+    
+</div>
+
+<div id="proteins" class="page">
+    <h2>प्रथिने (Proteins)</h2>
+    <img src="https://idiva-media.ilnmedia.com/content/2024/Dec/thumbnail-79_6769319a6b066.jpg?w=450&h=338&cc=1" alt="" style="align-content: center; margin-left: 200px; border-radius: 40px;">
+    <p><b>शरीराची वाढ आणि झीज भरून काढण्यासाठी प्रथिनांची गरज असते.</b></p>
+    <div class="item-grid">
+        <div class="item-card"><h3>कडधान्ये</h3><p>मूग, मटकी, तूर इत्यादी.</p></div>
+        <div class="item-card"><h3>दूध व अंडी</h3><p>प्राणीजन्य प्रथिनांचे उत्तम स्रोत.</p></div>
+        <div class="item-card"><h3>सोयाबीन</h3><p>सर्वात जास्त प्रथिनांचा वनस्पती स्रोत.</p></div>
+    </div>
+</div>
+
+<div id="fats" class="page">
+    <header><h1>स्निग्ध पदार्थ (Fats)</h1></header>
+    <img src="https://cdn1.byjus.com/wp-content/uploads/2018/07/Fat.png" class="hero-img">
+    <p>तेल, तूप, लोणी यांसारख्या स्निग्ध पदार्थांपासून ही आपल्याला थोड्या प्रमाणात ऊर्जा मिळते. आपण खाल्लेल्या अन्नापासून आपल्याला उष्णतेच्या स्वरूपात ऊर्जा मिळते. ऊर्जा मोजण्यासाठी 'किलोकॅलरी' हे एकक वापरले जाते.</p>
+    <div class="item-grid">
+        <div class="item-card"><h3>तेल (Oil)</h3><p>शेंगदाणा, सूर्यफूल किंवा तिळाचे तेल.</p></div>
+        <div class="item-card"><h3>लोणी व तूप</h3><p>प्राणीजन्य स्निग्ध पदार्थ जे शरीरासाठी आवश्यक असतात.</p></div>
+        <div class="item-card"><h3>सुका मेवा</h3><p>बदाम, अक्रोड यातूनही चांगले फॅट्स मिळतात.</p></div>
+    </div>
+</div>
+
+<div id="vitamins" class="page">
+    <h2>जीवनसत्त्वे (Vitamins)</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvV-Et7-HEaUCLpwDOr6EDeFidWY0Ma7WH3A&s" alt="" style="margin-left: 300px; border-radius: 20px;">
+    <p>रोगांचा प्रतिकार करण्यासाठी आणि शरीराच्या आरोग्यदायी कार्यासाठी जीवनसत्त्वांची गरज असते.</p>
+    
+    
+    <div class="item-grid">
+        <div class="item-card"><h3>जीवनसत्त्व अ</h3><p>डोळ्यांच्या आरोग्यासाठी (उदा. गाजर).</p></div>
+        <div class="item-card"><h3>जीवनसत्त्व क</h3><p>प्रतिकारशक्तीसाठी (उदा. आवळा, लिंबू).</p></div>
+        <div class="item-card"><h3>जीवनसत्त्व ड</h3><p>हाडांच्या मजबुतीसाठी (उदा. सूर्यप्रकाश).</p></div>
+    </div>
+</div>
+
+<div id="questions" class="page">
+    <h2>स्वाध्याय</h2>
+    <form action="">
+        
+    <p >१. ऊर्जेचे मुख्य एकक कोणते? <br>
+        <input type="checkbox" name="" id="">किलोकॅलरी 
+        <input type="checkbox" name="" id="">ग्रॅमकॅलरी 
+        <input type="checkbox" name="" id="">किलोग्रॅम
+        
+        </p>
+    
+    <p>२. स्निग्ध पदार्थांची दोन उदाहरणे द्या. <br>
+        <input type="checkbox" name="" id=""> साखर ,पेय 
+        <input type="checkbox" name="" id="">चहा ,कॉफी 
+        <input type="checkbox" name="" id="">तेल, तूप
+    
+    </p>
+    <p>३. वाढत्या वयातील मुलांना रोज किती किलोकॅलरी ऊर्जेची गरज असते? <br>
+        <input type="checkbox" name="" id="">२००० -२५०० 
+        <input type="checkbox" name="" id="">२१०० -२७०० 
+        <input type="checkbox" name="" id="">२६०० -३५०० 
+
+    </p>
+     <p>४. रोगांचा प्रतिकार करण्यासाठी आणि शरीराच्या आरोग्यदायी कार्यासाठी शरीराला कशाची गरज असते ? <br>
+        <input type="checkbox" name="" id="">टीव्ही पाहणे 
+        <input type="checkbox" name="" id="">फास्टफूड खाणे 
+        <input type="checkbox" name="" id="">जीवनसत्त्वे
+
+    </p>
+    <button type="submit" >Submit</button>
+            
+        
+            
+    </form>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsQeTVu0fF9_b9dwd8l6QrqddITj5LKzMW3g&s" alt="" style="margin: 2px; border-radius: 10px; margin-left: 250px;">
+</div>
+
+
+<footer>
+    <p>B.Ed Second Year Practical (ENTREPRENEURSHIP DEVELOPMENT)</p>
+    <p>Prepared by: Sweety Rajendra Jadhav</p>
+</footer>
+
+<script>
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(p => p.classList.remove('active-page'));
+        document.getElementById(pageId).classList.add('active-page');
+        window.scrollTo(0,0);
+    }
+</script>
+
+</body>
+</html>
